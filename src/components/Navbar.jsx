@@ -26,7 +26,7 @@ const Navbar = () => {
         </NavbarBrand>
 
         <NavbarContent as="div" justify="end">
-          <Dropdown placement="bottom-end" className="bg-[#2B2B2B]">
+          {/* <Dropdown placement="bottom-end" className="bg-[#2B2B2B]">
             <DropdownTrigger>
               <Avatar
                 isBordered
@@ -62,21 +62,29 @@ const Navbar = () => {
               </DropdownItem>
               <DropdownItem key="help_and_feedback">Contact Us</DropdownItem>
               <DropdownItem key="logout" color="danger">
-                Log Outs
+                Log Out
               </DropdownItem>
             </DropdownMenu>
-          </Dropdown>
+          </Dropdown> */}
           <NavbarItem>
             <Link href="/login">
-              <Button size="md" variant="flat">
-                Login
+              <Button
+                size="md"
+                className="bg-white font-semibold text-grey-600"
+                variant="light"
+              >
+                <span>Login</span>
               </Button>
             </Link>
           </NavbarItem>
           <NavbarItem>
             <Link href="/register">
-              <Button color="secondary" variant="flat">
-                Register
+              <Button
+                color="secondary"
+                className="text-white font-bold hover:bg-[#6B33CC]"
+                variant="flat"
+              >
+                <span>Sign Up</span>
               </Button>
             </Link>
           </NavbarItem>
