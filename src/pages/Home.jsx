@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@nextui-org/button";
 import bg from "../assets/gradient.png";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div
@@ -22,10 +23,14 @@ const Home = () => {
         className="bg-[#965CFF] hover:bg-[#6B33CC] h-12 w-22 self-center"
         variant="fade"
       >
-        <div className="flex items-center mx-3">
-          <span className="text-white text-xl font-medium mr-2">Generate</span>{" "}
-          <HiArrowRight className="text-white " />
-        </div>
+        <Link to="/generate">
+          <div className="flex items-center mx-3">
+            <span className="text-white text-xl font-medium mr-2">
+              Generate
+            </span>{" "}
+            <HiArrowRight className="text-white " />
+          </div>
+        </Link>
       </Button>
     </div>
   );

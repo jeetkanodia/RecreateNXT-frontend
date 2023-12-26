@@ -67,15 +67,15 @@ const Navbar = () => {
             </DropdownMenu>
           </Dropdown> */}
           <NavbarItem>
-            <Link href="/login">
-              <Button
-                size="md"
-                className="bg-white font-semibold text-grey-600"
-                variant="light"
-              >
+            <Button
+              size="md"
+              className="bg-white font-semibold text-grey-600"
+              variant="light"
+            >
+              <Link href="/login">
                 <span>Login</span>
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </NavbarItem>
           <NavbarItem>
             <Link href="/register">
