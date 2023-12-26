@@ -72,7 +72,7 @@ const Navbar = () => {
               className="bg-white font-semibold text-grey-600"
               variant="light"
             >
-              <Link href="/login">
+              <Link to="/login">
                 <span>Login</span>
               </Link>
             </Button>
