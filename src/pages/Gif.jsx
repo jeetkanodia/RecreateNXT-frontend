@@ -12,7 +12,7 @@ const Gif = () => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg5YWU5YWU3N2VhNGU4MmIzOTYzYWIiLCJpYXQiOjE3MDM3NjI3NjQsImV4cCI6MTcwMzg0OTE2NH0.fkg3hr3BQrqZCh1RHYLWlTPt4ZmGsaTrbmNCk8NyjXY`,
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThkNjE1ZjBmYzNiZWQ5ODA4YjExNDYiLCJpYXQiOjE3MDM3NjU4MjgsImV4cCI6MTcwMzg1MjIyOH0.TR42_YUD4Mrd50TBgmes5IUwmyIVWIHClIj9_vGmh5M`,
         },
       })
         .then((res) => res.json())
