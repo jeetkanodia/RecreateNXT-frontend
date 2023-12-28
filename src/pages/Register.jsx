@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import bg from "../assets/gradient.png";
 import Logo from "../components/Logo";
-
+import { BACKEND_URL } from "../assets/statics";
 import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 
@@ -9,6 +9,29 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleRegister = () => {
+    console.log(username, password, email);
+    setLoading(true);
+    fetch(`${BACKEND_URL}/api/user/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password, email }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setLoading(false);
+        if (data.error) {
+          alert(data.error);
+        } else {
+          alert("Registered Successfully");
+        }
+      });
+  };
   return (
     <div className="bg-grey-200 w-full min-h-screen flex flex-col justify-center items-center">
       <div
@@ -62,6 +85,7 @@ const Register = () => {
             </Link>{" "}
           </div>
           <Button
+            onClick={handleRegister}
             variant="bordered"
             className="bg-white text-[#212121] font-semibold mt-2 mb-7"
           >

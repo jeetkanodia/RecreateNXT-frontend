@@ -12,12 +12,13 @@ const Gif = () => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg5YWU5YWU3N2VhNGU4MmIzOTYzYWIiLCJpYXQiOjE3MDM1MjIwNjgsImV4cCI6MTcwMzYwODQ2OH0.ys9TND5T72gC5hHQALK9K85ICb1W9q-IgLVrokaWcn4`,
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg5YWU5YWU3N2VhNGU4MmIzOTYzYWIiLCJpYXQiOjE3MDM3NjI3NjQsImV4cCI6MTcwMzg0OTE2NH0.fkg3hr3BQrqZCh1RHYLWlTPt4ZmGsaTrbmNCk8NyjXY`,
         },
       })
         .then((res) => res.json())
         .then((data) => {
           if (data.error) {
+            console.log(data.error);
             setError(true);
             return;
           }

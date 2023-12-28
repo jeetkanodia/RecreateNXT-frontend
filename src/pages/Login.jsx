@@ -3,13 +3,30 @@ import bg from "../assets/gradient.png";
 import Logo from "../components/Logo";
 import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
-
+import { BACKEND_URL } from "../assets/statics";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const handleLogin = () => {
+  const [loading, setLoading] = useState(false);
+  const handleLogin = (e) => {
     e.preventDefault();
-    console.log("login");
+    setLoading(true);
+    fetch(`${BACKEND_URL}/api/user/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setLoading(false);
+        if (data.error) {
+          alert(data.error);
+        } else {
+          alert("Logged in Successfully");
+        }
+      });
   };
 
   return (
@@ -55,6 +72,7 @@ const Login = () => {
             </Link>{" "}
           </div>
           <Button
+            onClick={handleLogin}
             variant="bordered"
             className="bg-white text-[#212121] font-semibold mt-4 mb-7"
           >
