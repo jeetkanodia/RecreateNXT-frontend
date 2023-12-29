@@ -1,13 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import bg from "../assets/gradient.png";
 import Logo from "../components/Logo";
 import { Button } from "@nextui-org/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BACKEND_URL } from "../assets/statics";
+import useUserStore from "../store/userStore";
+import toast, { Toaster } from "react-hot-toast";
 const Login = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const setUser = useUserStore((state) => state.setUser);
+  const user = useUserStore((state) => state.user);
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user]);
+
   const handleLogin = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -22,15 +34,17 @@ const Login = () => {
       .then((data) => {
         setLoading(false);
         if (data.error) {
-          alert(data.error);
+          toast.error(data.error);
         } else {
-          alert("Logged in Successfully");
+          toast.success("Logged in successfully");
+          setUser(data.user);
         }
       });
   };
 
   return (
     <div className="bg-grey-200 w-full min-h-screen flex flex-col justify-center items-center">
+      <Toaster />
       <div
         style={{
           backgroundImage: `url(${bg})`,
