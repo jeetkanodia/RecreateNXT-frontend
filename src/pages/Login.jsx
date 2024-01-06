@@ -117,7 +117,7 @@ const Login = () => {
             Don't have an account?{" "}
             <Link
               to={"/register"}
-              className="text-white font-semibold hover:underline"
+              className="text-white font-semibold hover:underline hover:bg-gradient-to-r from-red-500 via-violet-600 to-cyan-400 hover:bg-clip-text hover:text-transparent "
             >
               Register
             </Link>{" "}
@@ -137,7 +137,7 @@ const Login = () => {
 
 export default Login;
 
-export const EyeSlashFilledIcon = (props) => (
+const EyeSlashFilledIcon = (props) => (
   <svg
     aria-hidden="true"
     fill="none"
@@ -171,7 +171,7 @@ export const EyeSlashFilledIcon = (props) => (
   </svg>
 );
 
-export const EyeFilledIcon = (props) => (
+const EyeFilledIcon = (props) => (
   <svg
     aria-hidden="true"
     fill="none"

@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { BACKEND_URL } from "../assets/statics";
+import useUserStore from "../store/userStore";
+import { useNavigate } from "react-router-dom";
+
 const Gif = () => {
+  const navigate = useNavigate();
   const [gif, setGif] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const user = useUserStore((state) => state.user);
   useEffect(() => {
+    if (!user) {
+      navigate("/login");
+    }
+    const token = user.token;
     const fetchGif = async () => {
       setLoading(true);
       setError(false);
@@ -12,7 +21,7 @@ const Gif = () => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThkNjE1ZjBmYzNiZWQ5ODA4YjExNDYiLCJpYXQiOjE3MDM3NjU4MjgsImV4cCI6MTcwMzg1MjIyOH0.TR42_YUD4Mrd50TBgmes5IUwmyIVWIHClIj9_vGmh5M`,
+          Authorization: `Bearer ${token}`,
         },
       })
         .then((res) => res.json())

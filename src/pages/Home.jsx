@@ -7,10 +7,10 @@ const Home = () => {
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center">
       <motion.div
-        initial={{ opacity: 0.1 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        exit={{ opacity: 0 }}
+        // initial={{ opacity: 0.1 }}
+        // animate={{ opacity: 1 }}
+        // transition={{ duration: 1 }}
+        // exit={{ opacity: 0 }}
         style={{
           backgroundImage: `url(${bg})`,
           backgroundRepeat: "no-repeat",
