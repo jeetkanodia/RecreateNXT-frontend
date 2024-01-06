@@ -62,7 +62,7 @@ const Register = () => {
             <input
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="rounded-3xl bg-[rgba(255,255,255,0.2)] shadow-2xl border border-white"
+              className="rounded-3xl mt-2 px-2 bg-[rgba(255,255,255,0.2)] shadow-2xl border border-white"
               type="text"
               id="username"
             />
@@ -72,7 +72,7 @@ const Register = () => {
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="rounded-3xl bg-[rgba(255,255,255,0.2)] shadow-2xl border border-white"
+              className="rounded-3xl mt-2 px-2 bg-[rgba(255,255,255,0.2)] shadow-2xl border border-white"
               type="text"
               id="email"
             />
@@ -83,7 +83,7 @@ const Register = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               type="password"
-              className="rounded-3xl bg-[rgba(255,255,255,0.2)] shadow-2xl border border-white"
+              className="rounded-3xl mt-2 px-2 bg-[rgba(255,255,255,0.2)] shadow-2xl border border-white"
               id="password"
             />
           </div>
