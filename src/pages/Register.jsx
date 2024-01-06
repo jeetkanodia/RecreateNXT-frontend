@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import bg from "../assets/gradient.png";
 import Logo from "../components/Logo";
 import { BACKEND_URL } from "../assets/statics";
 import { Button } from "@nextui-org/react";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import useUserStore from "../store/userStore";
+import toast, { Toaster } from "react-hot-toast";
 const Register = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const setUser = useUserStore((state) => state.setUser);
+  const user = useUserStore((state) => state.user);
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user]);
 
   const handleRegister = () => {
     console.log(username, password, email);
@@ -26,14 +36,16 @@ const Register = () => {
         console.log(data);
         setLoading(false);
         if (data.error) {
-          alert(data.error);
+          toast.error(data.error);
         } else {
-          alert("Registered Successfully");
+          toast.success("Registered successfully");
+          setUser(data.user);
         }
       });
   };
   return (
     <div className="bg-grey-200 w-full min-h-screen flex flex-col justify-center items-center">
+      <Toaster />
       <div
         style={{
           backgroundImage: `url(${bg})`,

@@ -73,20 +73,21 @@ const Navbar = () => {
               variant="light"
             >
               <Link to="/login">
-                <span>Login</span>
+                <span className="w-full h-full">Login</span>
               </Link>
             </Button>
           </NavbarItem>
+
           <NavbarItem>
-            <Link href="/register">
-              <Button
-                color="secondary"
-                className="text-white font-bold hover:bg-[#6B33CC]"
-                variant="flat"
-              >
+            <Button
+              color="secondary"
+              className="text-white font-bold hover:bg-[#6B33CC]"
+              variant="flat"
+            >
+              <Link to="/register">
                 <span>Sign Up</span>
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </NavbarItem>
         </NavbarContent>
       </TopBar>
