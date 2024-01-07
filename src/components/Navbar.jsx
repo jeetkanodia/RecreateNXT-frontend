@@ -71,6 +71,7 @@ const Navbar = () => {
                   color="danger"
                   onClick={() => {
                     removeUser();
+                    navigate("/");
                   }}
                 >
                   Log Out
