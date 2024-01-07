@@ -19,7 +19,7 @@ const Profile = () => {
   }, [user]);
 
   return (
-    <div className="bg-[#212121] w-full text-white min-h-screen flex flex-col items-center pt-40">
+    <div className="bg-[#212121] w-full  min-h-screen flex flex-col items-center pt-40">
       <div className="w-[70%]   mb-4">
         <div className="flex">
           <div className="rounded-full m-1 h-40 w-40">
@@ -29,24 +29,45 @@ const Profile = () => {
             />
           </div>
           <div className="ml-5 mt-6">
-            <h1 className="text-5xl font-semibold mt-3">Jeet kanodia</h1>
-            <p className="text-2xl mt-2">gay for a living</p>
+            <h1 className="text-5xl text-white font-semibold mt-3">
+              Jeet kanodia
+            </h1>
+            <p className="text-2xl text-gray-500 mt-2">gay for a living</p>
           </div>
         </div>
-        <div className="m-2 mt-2">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae
-          dolore ipsa voluptates accusamus similique quasi dignissimos natus
-          repellat odit aut? Distinctio alias quae fuga nihil exercitationem,
-          cum ab eligendi nesciunt?
+        <div className="m-2 text-white text-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+          vel. Corrupti qui enim perspiciatis laborum tenetur et reprehenderit
+          adipisci illum, at nisi quisquam, provident nihil blanditiis eius
+          nobis nesciunt natus.
         </div>
       </div>
 
-      <div className=" w-[70%] ">my work</div>
-      <div className="flex flex-wrap mt-2">
-        <div className="">my work</div>
-        <div className="  ">my work</div>
-        <div className=" ">my work</div>
+      <div className=" w-[70%]  text-xl ">
+        <span className=" bg-gradient-to-r from-red-500 via-violet-600 to-cyan-400 bg-clip-text text-transparent">
+          My Work
+        </span>
       </div>
+      <div className="flex  max-w-[70%] flex-wrap mt-2 text-white gap-8 mb-20">
+        <WorkCard />
+        <WorkCard />
+        <WorkCard />
+        <WorkCard />
+        <WorkCard />
+        <WorkCard />
+      </div>
+    </div>
+  );
+};
+
+const WorkCard = () => {
+  return (
+    <div className="w-64 h-40 m-auto bg-white flex flex-col items-center rounded-xl bg-white">
+      <img
+        src="https://img.youtube.com/vi/eafFc-r-d7w/0.jpg"
+        alt=""
+        className="w-56 h-30  rounded-xl"
+      />
     </div>
   );
 };
