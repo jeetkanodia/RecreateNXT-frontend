@@ -61,8 +61,8 @@ const Navbar = () => {
                   </Link>
                 </DropdownItem>
                 <DropdownItem key="configurations">
-                  <Link href={"/account"}>
-                    <div className="text-white w-full h-full">Account</div>
+                  <Link to={"/profile"}>
+                    <div className="text-white w-full h-full">Profile</div>
                   </Link>
                 </DropdownItem>
                 <DropdownItem key="help_and_feedback">Contact Us</DropdownItem>
