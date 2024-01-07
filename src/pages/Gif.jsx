@@ -11,7 +11,7 @@ const Gif = () => {
   const user = useUserStore((state) => state.user);
   useEffect(() => {
     if (!user) {
-      navigate("/login");
+      return navigate("/login");
     }
     const token = user.token;
     const fetchGif = async () => {
