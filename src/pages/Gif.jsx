@@ -12,7 +12,7 @@ const Gif = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const user = useUserStore((state) => state.user);
-
+  const setUser = useUserStore((state) => state.setUser);
   const handleSubmit = async () => {
     if (!url) return;
     const token = user.token;
@@ -31,6 +31,8 @@ const Gif = () => {
           setError(true);
           return;
         } else {
+          user.submittedGifs.push({ ytUrl: url, gifUrl: gif });
+          setUser(user);
           toast.success("Gif submitted successfully");
         }
       });
