@@ -5,17 +5,22 @@ import Logo from "../components/Logo";
 import { Button } from "@nextui-org/react";
 import { Link, useNavigate } from "react-router-dom";
 import { BACKEND_URL } from "../assets/statics";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 import useUserStore from "../store/userStore";
+
 const Profile = () => {
   const navigate = useNavigate();
 
   const setUser = useUserStore((state) => state.setUser);
   const user = useUserStore((state) => state.user);
+  const [submittedGifs, setSubmittedGifs] = useState([]);
 
   useEffect(() => {
     if (!user) {
       navigate("/login");
     }
+    setSubmittedGifs(user?.submittedGifs);
   }, [user]);
 
   return (
@@ -30,7 +35,7 @@ const Profile = () => {
           </div>
           <div className="ml-5 mt-6">
             <h1 className="text-5xl text-white font-semibold mt-3">
-              Jeet kanodia
+              {user?.username}
             </h1>
             <p className="text-2xl text-gray-500 mt-2">gay for a living</p>
           </div>
@@ -49,26 +54,50 @@ const Profile = () => {
         </span>
       </div>
       <div className="flex  max-w-[70%] flex-wrap mt-2 text-white gap-8 mb-20">
-        <WorkCard />
-        <WorkCard />
-        <WorkCard />
-        <WorkCard />
-        <WorkCard />
-        <WorkCard />
+        {submittedGifs?.map((gif, idx) => (
+          <WorkCard url={gif.ytUrl} key={idx} />
+        ))}
       </div>
     </div>
   );
 };
 
-const WorkCard = () => {
+const WorkCard = ({ url }) => {
+  //convert youtube video url to id
+  //const url = "https://www.youtube.com/watch?v=G2RpHt8NX0o";
+  const video_id = url.split("v=")[1].split("&")[0];
+
   return (
-    <div className="w-64 h-40 m-auto bg-white flex flex-col items-center rounded-xl bg-white">
-      <img
-        src="https://img.youtube.com/vi/eafFc-r-d7w/0.jpg"
-        alt=""
-        className="w-56 h-30  rounded-xl"
-      />
-    </div>
+    <Popup
+      className="bg-black "
+      modal={true}
+      overlayStyle={{ background: "rgba(0,0,0,0.5" }}
+      contentStyle={{
+        background: "rgba(0,0,0,0.5)",
+        width: "fit-content",
+        border: "none",
+      }}
+      trigger={
+        <div className="w-64 h-40 m-auto bg-transparent flex flex-col items-center rounded-xl">
+          <img
+            src={`https://img.youtube.com/vi/${video_id}/0.jpg`}
+            alt=""
+            className="w-56 h-30  rounded-xl"
+          />{" "}
+        </div>
+      }
+    >
+      <div className=" flex justify-center items-center">
+        <iframe
+          className="rounded-2xl"
+          width="700em"
+          height="393.8em"
+          src={"https://www.youtube.com/embed/" + video_id}
+          title="YouTube video player"
+          allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
+      </div>
+    </Popup>
   );
 };
 

@@ -20,7 +20,7 @@ const Navbar = () => {
   const removeUser = useUserState((state) => state.removeUser);
   return (
     <div className="fixed  w-[70%] ml-[15%] shadow-lg rounded-3xl mt-4 bg-[rgba(0,0,0,0.1)]">
-      <TopBar isBlurred={false} className="bg-[rgba(0,0,0,0)]  rounded-3xl ">
+      <TopBar isBlurred={true} className="bg-[rgba(0,0,0,0)]  rounded-3xl ">
         <NavbarBrand>
           <Link to="/" className="text-white">
             <div className="mr-2">
