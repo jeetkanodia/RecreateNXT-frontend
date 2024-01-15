@@ -78,11 +78,11 @@ const WorkCard = ({ url }) => {
         border: "none",
       }}
       trigger={
-        <div className="w-64 h-40 m-auto bg-transparent flex flex-col items-center rounded-xl">
+        <div className="w-56 h-28 m-auto bg-transparent flex flex-col items-center rounded-xl">
           <img
             src={`https://img.youtube.com/vi/${video_id}/0.jpg`}
             alt=""
-            className="w-56 h-30  rounded-xl"
+            className="w-56 h-28 object-cover rounded-xl"
           />{" "}
         </div>
       }
