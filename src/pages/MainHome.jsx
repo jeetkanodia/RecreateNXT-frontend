@@ -7,7 +7,7 @@ const MainHome = () => {
     <div className="w-full min-h-screen tracking-wide bg-white">
       <div className="flex justify-between">
         <div>
-          <div className="text-[#7300FF] tracking-wide pt-32 pl-9 font-extrabold text-9xl text-[11rem] gothfont">
+          <div className="text-[#7300FF] tracking-wide pt-32 pl-16 font-extrabold text-9xl text-[11rem] gothfont">
             pxl.vzn
           </div>
           <div className="flex pl-7 mt-20 m-8">
@@ -20,40 +20,43 @@ const MainHome = () => {
         <div>
           {/* make 3 images circles */}
           <div className="flex mt-20 pt-28 mr-80  w-full justify-center">
-            <div className="w-36 border-2 hover:rotate-6 hover:scale-110 transition-all z-0 border-[#7300FF] mr-[-50px] h-36 bg-blue-500 rounded-full">
+            <div className="w-36 border-2 hover:rotate-6 hover:scale-110 rotate-12 transition-all z-0 border-[#7300FF] mr-[-50px] h-36 bg-blue-500 rounded-full">
               <img src={jeet} alt="jeet" className="rounded-full" />
             </div>
             <div className="w-36 border-2 hover:rotate-6 hover:scale-110 border-[#7300FF] mt-24 transition-all h-36 z-10 bg-black rounded-full">
               <img src={varun} alt="varun" className="rounded-full" />
             </div>
-            <div className="w-36 border-2 hover:rotate-6 hover:scale-110 border-[#7300FF] mr-96 transition-all h-36 z-20 ml-[-50px] bg-red-600 rounded-full">
+            <div className="w-36 border-2 hover:rotate-6 hover:scale-110 border-[#7300FF] mr-96 transition-all h-36 z-20 mt-2 ml-[-50px] bg-red-600 rounded-full">
               <img src={yuvraj} alt="yuvraj" className="rounded-full" />
             </div>
           </div>
         </div>
       </div>
       <div className="text-[#575757] pl-8 mx-8 m-2 font-medium text-3xl">
-        <div className="mb-2">1. pxlvzn is a community of artists.</div>
+        <div className="mb-2 ml-1">1. pxlvzn is a community of artists.</div>
         <div className="mb-2">2. we love every pixel on our screens.</div>
         <div className="mb-2">
           3. let's connect at <span className="font-bold">work@pxlvzn.in</span>
         </div>
       </div>
       <div className="flex gap-4 m-2 my-20 pl-8 text-[#575757] font-light  text-3xl">
-        <div className=" bg-[#7300FF] p-4 rounded-2xl text-white hover:scale-110 transition-all ">
+        <div className=" bg-[#7300FF] p-4  rounded-2xl text-white hover:scale-110 transition-all ">
           community
         </div>
-        <div className="rounded-2xl p-4 border-2 flex flex-col items-center content-center px-10 border-[#575757] hover:scale-110 transition-all">
-          <div>tools</div>
-          <div className="text-sm  text-white gochifont bg-[#7300FF] rounded-xl p-1 mb-[-50px]">
+        <div className="rounded-2xl p-4 border-2 flex flex-col items-center content-center px-10 border-[#575757]">
+          <div className="mb-1">tools</div>
+          <div className="text-[0.8rem] text-white gochifont h-[1.9rem] bg-[#7300FF] rounded-xl px-2  mb-[-40px]">
             (work in progress)
           </div>
         </div>
         <div className="rounded-2xl p-4 border-2 px-10 border-[#575757] hover:scale-110 transition-all">
           library
         </div>
-        <div className="rounded-2xl p-4 border-2 px-10 border-[#575757] hover:scale-110 transition-all">
-          shop
+        <div className="rounded-2xl p-4 border-2 flex flex-col items-center content-center px-10 border-[#575757]">
+          <div className="mb-1">shop</div>
+          <div className="text-[0.8rem] text-white gochifont h-[1.9rem] bg-[#7300FF] rounded-xl px-2  mb-[-50px]">
+            (work in progress)
+          </div>
         </div>
       </div>
     </div>
@@ -69,8 +72,8 @@ function HiSpeakerphone(props) {
       fill="#7300FF"
       strokeWidth={0}
       viewBox="0 0 20 20"
-      height="3em"
-      width="3em"
+      height="2.7em"
+      width="2.7em"
       {...props}
     >
       <path
