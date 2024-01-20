@@ -1,18 +1,38 @@
 import React from "react";
-
+import jeet from "../assets/jeet.png";
+import yuvraj from "../assets/yuvraj.png";
+import varun from "../assets/varun.png";
 const MainHome = () => {
   return (
-    <div className="w-full min-h-screen  bg-gradient-to-b from-white from-50% to-[#a257ff] ">
-      <div className="text-[#7300FF] pt-24 pl-8 font-extrabold text-9xl">
-        pxl.vzn
+    <div className="w-full min-h-screen tracking-wide bg-white">
+      <div className="flex justify-between">
+        <div>
+          <div className="text-[#7300FF] tracking-wide pt-28 pl-9 font-extrabold text-9xl gothfont">
+            pxl.vzn
+          </div>
+          <div className="flex pl-7 mt-12 m-8">
+            <HiSpeakerphone />{" "}
+            <span className="text-[#575757] pl-2 font-bold text-xl ">
+              \ pixel-vision \
+            </span>
+          </div>
+        </div>
+        <div>
+          {/* make 3 images circles */}
+          <div className="flex mt-20 pt-28 mr-80  w-full justify-center">
+            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 transition-all z-1 border-blue-600 mr-[-30px] h-20 bg-blue-500 rounded-full">
+              <img src={jeet} alt="jeet" className="rounded-full" />
+            </div>
+            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 border-blue-600 mt-14 transition-all h-20 z-2 bg-black rounded-full">
+              <img src={varun} alt="varun" className="rounded-full" />
+            </div>
+            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 border-blue-600 mr-96 transition-all h-20 z-3 ml-[-30px] bg-red-600 rounded-full">
+              <img src={yuvraj} alt="yuvraj" className="rounded-full" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="flex pl-7 m-8">
-        <HiSpeakerphone />{" "}
-        <span className="text-[#575757] pl-2 font-bold text-md ">
-          \ pixel-vision \
-        </span>
-      </div>
-      <div className="text-[#575757] m-8 font-medium text-xl">
+      <div className="text-[#575757] m-8 font-medium text-md">
         <div className="mb-2">1. pxlvzn is a community of artists.</div>
         <div className="mb-2">2. we love every pixel on our screens.</div>
         <div className="mb-2">
