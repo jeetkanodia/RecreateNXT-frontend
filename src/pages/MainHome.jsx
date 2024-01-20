@@ -7,7 +7,7 @@ const MainHome = () => {
     <div className="w-full min-h-screen tracking-wide bg-white">
       <div className="flex justify-between">
         <div>
-          <div className="text-[#7300FF] tracking-wide pt-28 pl-9 font-extrabold text-9xl gothfont">
+          <div className="text-[#7300FF] tracking-wide pt-28 pl-9 font-extrabold text-9xl text-[9rem] gothfont">
             pxl.vzn
           </div>
           <div className="flex pl-7 mt-12 m-8">
@@ -20,13 +20,13 @@ const MainHome = () => {
         <div>
           {/* make 3 images circles */}
           <div className="flex mt-20 pt-28 mr-80  w-full justify-center">
-            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 transition-all z-1 border-blue-600 mr-[-30px] h-20 bg-blue-500 rounded-full">
+            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 transition-all z-0 border-blue-600 mr-[-30px] h-20 bg-blue-500 rounded-full">
               <img src={jeet} alt="jeet" className="rounded-full" />
             </div>
-            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 border-blue-600 mt-14 transition-all h-20 z-2 bg-black rounded-full">
+            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 border-blue-600 mt-14 transition-all h-20 z-10 bg-black rounded-full">
               <img src={varun} alt="varun" className="rounded-full" />
             </div>
-            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 border-blue-600 mr-96 transition-all h-20 z-3 ml-[-30px] bg-red-600 rounded-full">
+            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 border-blue-600 mr-96 transition-all h-20 z-20 ml-[-30px] bg-red-600 rounded-full">
               <img src={yuvraj} alt="yuvraj" className="rounded-full" />
             </div>
           </div>
@@ -39,13 +39,19 @@ const MainHome = () => {
           3. let's connect at <span className="font-bold">work@pxlvzn.in</span>
         </div>
       </div>
-      <div className="flex gap-2 m-2 pl-8 text-[#575757] font-medium text-xl">
-        <div className=" bg-[#7300FF] p-4 rounded-2xl text-white ">
+      <div className="flex gap-4 m-2 pl-8 text-[#575757] font-medium text-xl">
+        <div className=" bg-[#7300FF] p-4 rounded-2xl text-white hover:scale-110 transition-all ">
           community
         </div>
-        <div className="rounded-2xl p-4 border border-[#575757]">tools</div>
-        <div className="rounded-2xl p-4 border border-[#575757]">library</div>
-        <div className="rounded-2xl p-4 border border-[#575757]">shop</div>
+        <div className="rounded-2xl p-4 border border-[#575757] hover:scale-110 transition-all">
+          tools
+        </div>
+        <div className="rounded-2xl p-4 border border-[#575757] hover:scale-110 transition-all">
+          library
+        </div>
+        <div className="rounded-2xl p-4 border border-[#575757] hover:scale-110 transition-all">
+          shop
+        </div>
       </div>
     </div>
   );
