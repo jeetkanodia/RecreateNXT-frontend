@@ -21,7 +21,7 @@ const MainHome = () => {
         </div>
         <div>
           {/* make 3 images circles */}
-          <div className="flex mt-20 pt-28 mr-80  w-full justify-center">
+          <div className="flex mt-20 pt-28 mr-80 mb-[-80px] w-full justify-center">
             <div className="w-36 border-2 hover:rotate-6 hover:scale-110 rotate-12 transition-all z-0 border-[#7300FF] mr-[-50px] h-36 bg-blue-500 rounded-full">
               <img src={jeet} alt="jeet" className="rounded-full" />
             </div>
@@ -32,8 +32,8 @@ const MainHome = () => {
               <img src={yuvraj} alt="yuvraj" className="rounded-full" />
             </div>
           </div>
-          <div>
-            <div className="w-20 ml-32">
+          <div className="mb-[-50px] mr-4">
+            <div className="w-20 ml-36 ">
               <img src={arrow} alt="arrow" />
             </div>
             <div className="gochifont text-[#7300FF] text-2xl">
@@ -47,12 +47,12 @@ const MainHome = () => {
         <div className="mb-2">2. we love every pixel on our screens.</div>
         <div className="mb-2">
           3. let's connect at <span className="font-bold">work@pxlvzn.in</span>
-          <div className="w-60 ml-72 mt-1 ">
+          <div className="w-64 ml-72 ">
             <img src={line} alt="linepng" />
           </div>
         </div>
       </div>
-      <div className="flex gap-4 m-2 my-20 pl-8 text-[#575757] font-light  text-3xl">
+      <div className="flex gap-4 m-6 my-20 pl-8 text-[#575757] font-light  text-3xl">
         <div className=" bg-[#7300FF] p-4  rounded-2xl text-white hover:scale-110 transition-all ">
           community
         </div>
