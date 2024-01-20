@@ -2,6 +2,8 @@ import React from "react";
 import jeet from "../assets/jeet.png";
 import yuvraj from "../assets/yuvraj.png";
 import varun from "../assets/varun.png";
+import line from "../assets/line.png";
+import arrow from "../assets/arrow.png";
 const MainHome = () => {
   return (
     <div className="w-full min-h-screen tracking-wide bg-white">
@@ -30,6 +32,14 @@ const MainHome = () => {
               <img src={yuvraj} alt="yuvraj" className="rounded-full" />
             </div>
           </div>
+          <div>
+            <div className="w-20 ml-32">
+              <img src={arrow} alt="arrow" />
+            </div>
+            <div className="gochifont text-[#7300FF] text-2xl">
+              crafted by these guys
+            </div>
+          </div>
         </div>
       </div>
       <div className="text-[#575757] pl-8 mx-8 m-2 font-medium text-3xl">
@@ -37,6 +47,9 @@ const MainHome = () => {
         <div className="mb-2">2. we love every pixel on our screens.</div>
         <div className="mb-2">
           3. let's connect at <span className="font-bold">work@pxlvzn.in</span>
+          <div className="w-60 ml-72 mt-1 ">
+            <img src={line} alt="linepng" />
+          </div>
         </div>
       </div>
       <div className="flex gap-4 m-2 my-20 pl-8 text-[#575757] font-light  text-3xl">
