@@ -7,12 +7,12 @@ const MainHome = () => {
     <div className="w-full min-h-screen tracking-wide bg-white">
       <div className="flex justify-between">
         <div>
-          <div className="text-[#7300FF] tracking-wide pt-28 pl-9 font-extrabold text-9xl text-[9rem] gothfont">
+          <div className="text-[#7300FF] tracking-wide pt-32 pl-9 font-extrabold text-9xl text-[11rem] gothfont">
             pxl.vzn
           </div>
-          <div className="flex pl-7 mt-12 m-8">
+          <div className="flex pl-7 mt-20 m-8">
             <HiSpeakerphone />{" "}
-            <span className="text-[#575757] pl-2 font-bold text-xl ">
+            <span className="text-[#575757] pl-2 mt-1 font-bold text-3xl">
               \ pixel-vision \
             </span>
           </div>
@@ -20,36 +20,36 @@ const MainHome = () => {
         <div>
           {/* make 3 images circles */}
           <div className="flex mt-20 pt-28 mr-80  w-full justify-center">
-            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 transition-all z-0 border-blue-600 mr-[-30px] h-20 bg-blue-500 rounded-full">
+            <div className="w-36 border-2 hover:rotate-6 hover:scale-110 transition-all z-0 border-[#7300FF] mr-[-50px] h-36 bg-blue-500 rounded-full">
               <img src={jeet} alt="jeet" className="rounded-full" />
             </div>
-            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 border-blue-600 mt-14 transition-all h-20 z-10 bg-black rounded-full">
+            <div className="w-36 border-2 hover:rotate-6 hover:scale-110 border-[#7300FF] mt-24 transition-all h-36 z-10 bg-black rounded-full">
               <img src={varun} alt="varun" className="rounded-full" />
             </div>
-            <div className="w-20 border-2 hover:rotate-6 hover:scale-110 border-blue-600 mr-96 transition-all h-20 z-20 ml-[-30px] bg-red-600 rounded-full">
+            <div className="w-36 border-2 hover:rotate-6 hover:scale-110 border-[#7300FF] mr-96 transition-all h-36 z-20 ml-[-50px] bg-red-600 rounded-full">
               <img src={yuvraj} alt="yuvraj" className="rounded-full" />
             </div>
           </div>
         </div>
       </div>
-      <div className="text-[#575757] m-8 font-medium text-md">
+      <div className="text-[#575757] pl-8 mx-8 m-2 font-medium text-3xl">
         <div className="mb-2">1. pxlvzn is a community of artists.</div>
         <div className="mb-2">2. we love every pixel on our screens.</div>
         <div className="mb-2">
           3. let's connect at <span className="font-bold">work@pxlvzn.in</span>
         </div>
       </div>
-      <div className="flex gap-4 m-2 pl-8 text-[#575757] font-medium text-xl">
+      <div className="flex gap-4 m-2 my-20 pl-8 text-[#575757] font-light  text-3xl">
         <div className=" bg-[#7300FF] p-4 rounded-2xl text-white hover:scale-110 transition-all ">
           community
         </div>
-        <div className="rounded-2xl p-4 border border-[#575757] hover:scale-110 transition-all">
+        <div className="rounded-2xl p-4 border-2 border-[#575757] hover:scale-110 transition-all">
           tools
         </div>
-        <div className="rounded-2xl p-4 border border-[#575757] hover:scale-110 transition-all">
+        <div className="rounded-2xl p-4 border-2 border-[#575757] hover:scale-110 transition-all">
           library
         </div>
-        <div className="rounded-2xl p-4 border border-[#575757] hover:scale-110 transition-all">
+        <div className="rounded-2xl p-4 border-2 border-[#575757] hover:scale-110 transition-all">
           shop
         </div>
       </div>
@@ -66,8 +66,8 @@ function HiSpeakerphone(props) {
       fill="#7300FF"
       strokeWidth={0}
       viewBox="0 0 20 20"
-      height="1.8em"
-      width="1.8em"
+      height="3em"
+      width="3em"
       {...props}
     >
       <path
