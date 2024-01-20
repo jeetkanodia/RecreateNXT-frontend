@@ -43,13 +43,16 @@ const MainHome = () => {
         <div className=" bg-[#7300FF] p-4 rounded-2xl text-white hover:scale-110 transition-all ">
           community
         </div>
-        <div className="rounded-2xl p-4 border-2 border-[#575757] hover:scale-110 transition-all">
-          tools
+        <div className="rounded-2xl p-4 border-2 flex flex-col items-center content-center px-10 border-[#575757] hover:scale-110 transition-all">
+          <div>tools</div>
+          <div className="text-sm  text-white gochifont bg-[#7300FF] rounded-xl p-1 mb-[-50px]">
+            (work in progress)
+          </div>
         </div>
-        <div className="rounded-2xl p-4 border-2 border-[#575757] hover:scale-110 transition-all">
+        <div className="rounded-2xl p-4 border-2 px-10 border-[#575757] hover:scale-110 transition-all">
           library
         </div>
-        <div className="rounded-2xl p-4 border-2 border-[#575757] hover:scale-110 transition-all">
+        <div className="rounded-2xl p-4 border-2 px-10 border-[#575757] hover:scale-110 transition-all">
           shop
         </div>
       </div>
