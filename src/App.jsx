@@ -38,7 +38,7 @@ function App() {
             </Routes>
           </AnimatePresence>
 
-          <Footer />
+          {/* <Footer /> */}
         </Router>
       </NextUIProvider>
     </>
