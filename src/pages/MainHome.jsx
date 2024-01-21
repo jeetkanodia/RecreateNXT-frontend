@@ -4,6 +4,7 @@ import yuvraj from "../assets/yuvraj.png";
 import varun from "../assets/varun.png";
 import line from "../assets/line.png";
 import arrow from "../assets/arrow.png";
+
 const MainHome = () => {
   return (
     <div className="w-full min-h-screen tracking-wide bg-white">
@@ -62,7 +63,7 @@ const MainHome = () => {
             (work in progress)
           </div>
         </div>
-        <div className="rounded-2xl p-4 border-2 px-10 border-[#575757] hover:scale-110 transition-all">
+        <div className="rounded-2xl p-4 border-2 px-10 border-[#575757] hover:scale-110 hover:bg-[#3f3e3e] hover:text-white transition-all">
           library
         </div>
         <div className="rounded-2xl p-4 border-2 flex flex-col items-center content-center px-10 border-[#575757]">
