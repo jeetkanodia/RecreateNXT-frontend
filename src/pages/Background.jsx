@@ -23,7 +23,7 @@ const Background = () => {
   return (
     <motion.section
       ref={targetRef}
-      className="relative w-full  min-h-screen  before:pointer-events-none before:fixed before:inset-0 before:z-0 before:bg-[radial-gradient(circle_farthest-side_at_var(--x,_10px)_var(--y,_10px),#7b61ff_0%,white_30%)] before:opacity-30"
+      className="relative w-full  min-h-screen  before:pointer-events-none before:fixed before:inset-0 before:z-0 before:bg-[radial-gradient(circle_farthest-side_at_var(--x,_10px)_var(--y,_10px),#7b61ff_0%,white_0%)] before:opacity-30"
     >
       <MainHome />
     </motion.section>
