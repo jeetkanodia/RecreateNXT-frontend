@@ -22,7 +22,7 @@ const Navbar = () => {
     <div className="fixed  w-[70%] ml-[15%] shadow-lg rounded-3xl mt-4 bg-[rgba(0,0,0,0.1)]">
       <TopBar isBlurred={true} className="bg-[rgba(0,0,0,0)]  rounded-3xl ">
         <NavbarBrand>
-          <Link to="/background" className="text-white">
+          <Link to="/blob" className="text-white">
             <div className="mr-2">
               <Logo />
             </div>
