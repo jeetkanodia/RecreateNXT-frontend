@@ -11,6 +11,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 import Background from "./pages/Background";
+import Blobbg from "./pages/Blob";
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/main" element={<MainHome />} />
               <Route path="/background" element={<Background />} />
+              <Route path="/blob" element={<Blobbg />} />
               <Route
                 path="/*"
                 element={
