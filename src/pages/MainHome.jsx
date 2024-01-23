@@ -4,7 +4,7 @@ import yuvraj from "../assets/yuvraj.png";
 import varun from "../assets/varun.png";
 import line from "../assets/line.png";
 import arrow from "../assets/arrow.png";
-
+import { Link } from "react-router-dom";
 const MainHome = () => {
   return (
     <div className="w-full min-h-screen tracking-wide ">
@@ -24,13 +24,19 @@ const MainHome = () => {
           {/* make 3 images circles */}
           <div className="flex mt-20 pt-28 mr-80 mb-[-80px] w-full justify-center">
             <div className="w-36 border-2 hover:rotate-6 hover:scale-110 rotate-12 transition-all z-0 border-[#7300FF] mr-[-50px] h-36 bg-blue-500 rounded-full">
-              <img src={jeet} alt="jeet" className="rounded-full" />
+              <Link to={"https://twitter.com/jeet_kanodia"} target="_blank">
+                <img src={jeet} alt="jeet" className="rounded-full" />
+              </Link>
             </div>
             <div className="w-36 border-2 hover:rotate-6 hover:scale-110 border-[#7300FF] mt-24 transition-all h-36 z-10 bg-black rounded-full">
-              <img src={varun} alt="varun" className="rounded-full" />
+              <Link to={"https://twitter.com/Varun_Gotmare"} target="_blank">
+                <img src={varun} alt="varun" className="rounded-full" />
+              </Link>
             </div>
             <div className="w-36 border-2 hover:rotate-6 hover:scale-110 border-[#7300FF] mr-96 transition-all h-36 z-20 mt-2 ml-[-50px] bg-red-600 rounded-full">
-              <img src={yuvraj} alt="yuvraj" className="rounded-full" />
+              <Link to={"https://twitter.com/yuvrajgargg"} target="_blank">
+                <img src={yuvraj} alt="yuvraj" className="rounded-full" />
+              </Link>
             </div>
           </div>
           <div className="mb-[-50px] mr-4">
