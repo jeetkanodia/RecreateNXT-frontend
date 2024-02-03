@@ -7,7 +7,7 @@ import arrow from "../assets/arrow.png";
 import { Link } from "react-router-dom";
 const MainHome = () => {
   return (
-    <div className="w-full min-h-screen tracking-wide ">
+    <div className="w-full min-h-screen tracking-wide">
       <div className="flex justify-between">
         <div>
           <div className="text-[#7300FF] tracking-wide pt-32 pl-16 font-extrabold text-9xl text-[11rem] gothfont">
