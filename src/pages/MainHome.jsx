@@ -59,7 +59,7 @@ const MainHome = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-4 m-6 my-20 pl-8 text-[#575757] font-light  text-3xl">
+      <div className="flex gap-4 m-6 my-20 pl-8 text-[#575757] font-light text-3xl flex-wrap ">
         <Link to={"https://discord.gg/SDVbHsABB7"} target={"_blank"}>
           <div className=" bg-[#7300FF] p-4  rounded-2xl text-white hover:scale-110 transition-all ">
             community
