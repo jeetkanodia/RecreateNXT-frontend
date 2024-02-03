@@ -9,7 +9,7 @@ import Profile from "./pages/Profile";
 import Register from "./pages/Register";
 import { NextUIProvider } from "@nextui-org/react";
 import Footer from "./components/Footer";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, useDeprecatedAnimatedState } from "framer-motion";
 import Background from "./pages/Background";
 import Blobbg from "./pages/Blob";
 function App() {
@@ -17,6 +17,21 @@ function App() {
     <>
       <NextUIProvider>
         <Router>
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path="*" element={<Blobbg />} />
+            </Routes>
+          </AnimatePresence>
+        </Router>
+      </NextUIProvider>
+    </>
+  );
+}
+
+export default App;
+
+{
+  /* <Router>
           <AnimatePresence mode="wait">
             {" "}
             <Routes>
@@ -42,11 +57,6 @@ function App() {
             </Routes>
           </AnimatePresence>
 
-          {/* <Footer /> */}
-        </Router>
-      </NextUIProvider>
-    </>
-  );
+          <Footer />
+        </Router> */
 }
-
-export default App;

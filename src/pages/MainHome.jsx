@@ -60,17 +60,22 @@ const MainHome = () => {
         </div>
       </div>
       <div className="flex gap-4 m-6 my-20 pl-8 text-[#575757] font-light  text-3xl">
-        <div className=" bg-[#7300FF] p-4  rounded-2xl text-white hover:scale-110 transition-all ">
-          community
-        </div>
+        <Link to={"https://discord.gg/SDVbHsABB7"} target={"_blank"}>
+          <div className=" bg-[#7300FF] p-4  rounded-2xl text-white hover:scale-110 transition-all ">
+            community
+          </div>
+        </Link>
         <div className="rounded-2xl p-4 border-2 flex flex-col items-center content-center px-10 border-[#575757]">
           <div className="mb-1">tools</div>
           <div className="text-[0.8rem] text-white gochifont h-[1.9rem] bg-[#7300FF] rounded-xl px-2  mb-[-40px]">
             (work in progress)
           </div>
         </div>
-        <div className="rounded-2xl p-4 border-2 px-10 border-[#575757] hover:scale-110 hover:bg-[#3f3e3e] hover:text-white transition-all">
-          library
+        <div className="rounded-2xl p-4 border-2 flex flex-col items-center content-center px-10 border-[#575757]">
+          <div className="mb-1">library</div>
+          <div className="text-[0.8rem] text-white gochifont h-[1.9rem] bg-[#7300FF] rounded-xl px-2  mb-[-50px]">
+            (work in progress)
+          </div>
         </div>
         <div className="rounded-2xl p-4 border-2 flex flex-col items-center content-center px-10 border-[#575757]">
           <div className="mb-1">shop</div>
